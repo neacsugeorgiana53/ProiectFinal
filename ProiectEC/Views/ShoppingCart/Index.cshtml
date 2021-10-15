@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ProductVM>
+
+@{
+    ViewData["Title"] = "Cos de cumparaturi";
+}
+
+<div class="row mb-2 mt-2 operationsButtons">
+    <div class="col-md-12">
+        
+    </div>
+</div>
+<br />
+<br />
+
+<table id="table" class="table table-hover  table-light">
+    <thead>
+        <tr>
+            <th hidden>Tip produs</th>
+            <th>Nume produs</th>
+            <th>Pret</th>
+            <th>Cantitate</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr id="@item.Id">
+                <td hidden>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>1</td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>

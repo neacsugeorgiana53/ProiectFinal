@@ -1,0 +1,12 @@
+﻿@model ProductTypeVM
+
+@{
+    ViewData["Title"] = "Adauga tip";
+
+}
+
+@{
+    ViewBag.IsNew = true;
+}
+
+@await Html.PartialAsync(@"../Shared/Components/_ProductType.cshtml"); 
